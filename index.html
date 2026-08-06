@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="fJTzwsNcz2AtRxQpJZzU7db7TLPdR_lKSAXfyWDtHB4">
+<meta name="google-site-verification" content="Xi3WpckDbMBvm1pdlc5XukNoA9uWDmnExIiOeaTOxq0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="DAX dotnet - Pure C# Slim SSG">
+<title>DAX .NET Static Site Generator</title>
+<meta name="description" content="DAX is a slim .NET SSG. Build static sites 50x faster than Blazor SSG. No WASM bloat, just pure static HTML. For .NET devs who hate Blazor slow.">
+<link rel="canonical" href="https://dax.axcora.com/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DAX .NET Static Site Generator">
+<meta property="og:title" content="DAX .NET Static Site Generator">
+<meta property="og:description" content="DAX is a slim .NET SSG. Build static sites 50x faster than Blazor SSG. No WASM bloat, just pure static HTML. For .NET devs who hate Blazor slow.">
+<meta property="og:url" content="https://dax.axcora.com/">
+<meta property="og:image" content="https://dax.axcora.com/img/dax-logo-primary.webp">
+<meta property="og:image:alt" content="DAX .NET Static Site Generator">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DAX .NET Static Site Generator">
+<meta name="twitter:description" content="DAX is a slim .NET SSG. Build static sites 50x faster than Blazor SSG. No WASM bloat, just pure static HTML. For .NET devs who hate Blazor slow.">
+<meta name="twitter:image" content="https://dax.axcora.com/img/dax-logo-primary.webp">
+<meta name="twitter:image:alt" content="DAX .NET Static Site Generator">
+<link href="/img/daxlogopress.webp" rel="icon" type="image/x-icon">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DAX .NET Static Site Generator",
+  "description": "DAX is a slim .NET SSG. Build static sites 50x faster than Blazor SSG. No WASM bloat, just pure static HTML. For .NET devs who hate Blazor slow.",
+  "url": "https://dax.axcora.com/",
+  "image": "https://dax.axcora.com/img/dax-logo-primary.webp",
+  "datePublished": "",
+  "author": {
+    "@type": "Person",
+    "name": "Axcora"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DAX .NET Static Site Generator",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dax.axcora.com//img/daxlogopress.webp"
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axcora-css@1.0.1/axcora.min.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div class="bg-grid"></div><div class="bg-radial"></div>
+<nav class="navbar">
+<div class="nav-inner">
+  <img class="img-repsonsive" 
+  src="/img/daxlogopress.webp" width="40" height="40" loading="eager" alt="DAX .NET Static Site Generator"/>
+  <div class="mono text-nav">
+  DAX.NET.SSG</div>
+<div class="nav-links" id="navLinks">
+<a href="#features">FEATURES</a><a href="#compare">VS BLAZOR</a><a href="#get-started">GET STARTED</a><a href="#docs">DOCS</a><a href="#download">DOWNLOAD</a>
+<a href="https://github.com/mesinkasir/dax/" class="btn-neon mono">GITHUB</a>
+</div>
+<button class="ham mono" aria-label="Menu" id="ham">
+<svg fill="#ffffff" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>fiction</title> <path d="M1673.9,1363.2L1673.9,1363.2c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0 c0-52.3,42.4-94.3,94.3-94.3h1366.8C1631.5,1268.5,1673.9,1310.9,1673.9,1363.2z"></path> <path d="M1673.9,895.6L1673.9,895.6c0,52.3-42.4,94.3-94.3,94.3H659c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h920.6C1631.5,800.8,1673.9,843.2,1673.9,895.6z"></path> <path d="M1673.9,427.9L1673.9,427.9c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h1366.8C1631.5,333.2,1673.9,375.6,1673.9,427.9z"></path> </g></svg>
+</button>
+</div>
+</nav>
+<header class="hero">
+<div class="hero-content">
+<div class="badge mono">⚡ 50MS BUILD • PURE C# SLIM • BALZOR KILLER</div>
+<h1 class="h1">BUILT IN<br><span>C#</span><br>
+<a href="https://dax.axcora.com">NOT WASM.</a></h1>
+<p class="texts"><p>DAX Dotenet by AXcora</p>
+<p>Pure C# static site generator. Single file Program.cs 800 lines. No Node, no Blazor WASM, no hydration.
+<span class="mono neons">dotnet run -- build</span> → 11 pages in 120ms.</p>
+<div class="cta-row">
+<a href="#download" class="glow-btn mono">dotnet run -- build</a>
+<a href="#compare" class="outline mono">Why not Blazor??</a>
+</div>
+<div class="meta-row mono"><span>◍ 0KB JS</span><span>◍ 50ms Load</span><span>◍ CMD Native</span><span>◍ SEO Ready</span><span>◍ MIT</span></div>
+<div class="term-wrap float">
+<div class="term">
+<div class="term-head">
+<span class="dot" style="background:#ff5f56"></span>
+<span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span>
+<span class="mono" style="margin-left:8px;font-size:10px;opacity:0.4">
+axcora@dotnet_ssg ~/dax</span></div>
+<div class="term-body"># dax version
+$ git clone https://github.com/mesinkasir/dax.git
+$ cd dax
+$ dotnet publish -c Release -o .
+$ dax build         # upload your site folder on hosting
+$ dax start         # run on your localhost:8080
+
+# slim version
+$ git clone https://github.com/mesinkasir/dax.git
+$ cd dax
+$ dotnet run -- build         # upload your site folder on hosting
+$ dotnet run -- start         # run on your localhost:8080
+
+$ dax build
+[DAX] loaded yaml: config
+[DAX] built / → home.dax
+[DAX] built /posts/hello-dax/ → post.dax
+[DAX] built /tags/csharp/ → tag.dax
+[DAX] built sitemap.xml + rss.xml
+[DAX] 11 pages in 127ms ✓
+
+$ dax start
+→ http://localhost:8080/ watching...<span class="cursor"></span></div>
+</div>
+</div>
+</div>
+</header>
+<main>
+<div class="neon-line mb-5"></div>
+<section class="container" id="features">
+<div class="mono info">FEATURES — ZERO BLOAT</div>
+<h2 class="title"><a href="https://dax.axcora.com" class="text-white">
+  Everything you need, nothing you don't.</a></h2>
+<div class="grid">
+
+<div class="glass card-hov p-20">
+  <h3 class="mono neons"><a href="https://dax.axcora.com" class="inhe">
+  AUTO SEO
+  </a></h3>
+  <p class="text-terminal">
+    Auto SEO injection script generates sitemap.xml, robots.txt, rss.xml, meta tags, og:image, twitter:card. No config needed.
+    </p>
+  </div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons"><a href="https://dax.axcora.com" class="inhe">
+  AUTO COLLECTIONS
+  </a></h3>
+  <p class="text-terminal">
+    content/services/jas.md → { { collections.services } } auto. No config, Jekyll style but faster.
+    </p>
+  </div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons"><a href="https://dax.axcora.com" class="inhe">
+  JAMTSACK CONCEPT
+  </a></h3>
+  <p class="text-terminal">
+    Working with content/, templates/, public/ like Jekyll, Hugo, Eleventy. No Node, no Blazor, no hydration.
+    </p>
+  </div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons"><a href="https://dax.axcora.com" class="inhe">
+  FREE NESTED FRONTMATTER
+  </a></h3>
+  <p class="text-terminal">
+    hero: list: [{name,url,meta:{deep:{level:3}}}] unlimited depth, no fixed schema.
+    </p>
+  </div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons"><a href="https://dax.axcora.com" class="inhe">
+  TAGS + PAGINATION
+  </a></h3>
+  <p class="text-terminal">
+    tags: [csharp] → /tags/csharp/ auto. pagination:6 → /posts/page/2/
+    </p>
+  </div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons"><a href="https://dax.axcora.com" class="inhe">
+  YAML + JSON AUTO
+  </a></h3>
+  <p class="text-terminal">
+    _data/*.yaml, *.json → { { config.list }}, { { metadata.title }} directly in templates.
+    </p>
+  </div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons"><a href="https://dax.axcora.com" class="inhe">
+  0KB HYDRATION
+  </a></h3>
+  <p class="text-terminal">
+    Pure HTML output. No blazor.web.js, no WASM, Lighthouse 90+, instant SEO.
+    </p>
+  </div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons"><a href="https://dax.axcora.com" class="inhe">
+  CMD NATIVE
+  </a></h3>
+  <p class="text-terminal">
+    Windows CMD, Linux, macOS. No MinGW, no make. Just dotnet SDK.
+    </p>
+  </div>
+  
+  </div>
+</section>
+<section class="container mt-5 mb-5" id="compare">
+  <div class="mono info">COMPARE DAX VS BLAZOR</div>
+<h2 class="title"><a href="https://dax.axcora.com" class="text-white">
+  .NET is heavy. DAX is not.
+</a></h2>
+<div class="compare glass">
+<table>
+<tr><th></th><th>DAX Pure C#</th><th>Blazor SSG</th><th>CAX (C)</th></tr>
+<tr><td>Load</td><td class="good">50ms</td><td class="bad">2000ms WASM boot</td><td class="good">50ms</td></tr>
+<tr><td>JS Payload</td><td class="good">0KB</td><td class="bad">512KB + _framework</td><td class="good">0KB</td></tr>
+<tr><td>Build Cmd</td><td>dotnet run -- build (0.12s)</td><td>dotnet publish (8s)</td><td>make + gcc (1.2s)</td></tr>
+<tr><td>Windows CMD</td><td class="good">Works</td><td>Heavy SDK</td><td class="bad">Need MinGW</td></tr>
+<tr><td>Vercel Deploy</td><td class="good">dotnet preinstalled ✓</td><td>WASM host needed</td><td class="bad">No GCC = fail</td></tr>
+<tr><td>Nested YAML</td><td class="good">Unlimited depth</td><td>JSON only</td><td>Depth 2 + segfault</td></tr>
+</table>
+</div>
+</section>
+<section class="container mb-5" id="get-start"">
+<div class="mono info">
+  GET STARTED</div>
+<h2 class="title"><a href="https://dax.axcora.com" class="text-white">
+  Build your site in 6 steps.
+</a></h2>
+<div class="grid">
+
+<div class="glass card-hov p-20">
+  <h3 class="mono neons2"><a href="https://dax.axcora.com" class="inhe">CONFIGURATION</a></h3>
+  <p class="text-terminal">
+  Open on _data/metadata.yaml and update site_url, title, description, author, social links and other settings.
+  </p></div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons2"><a href="https://dax.axcora.com" class="inhe">STATIC PAGE</a></h3>
+  <p class="text-terminal">
+  To create a static page, add a .md file in content/ folder. example content/about.md → /about/
+  </p></div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons2"><a href="https://dax.axcora.com" class="inhe">COLLECTION POSTS</a></h3>
+  <p class="text-terminal">
+  To create a collection item, add a .md file in the collection's folder. example content/posts/hello.md → /posts/hello-dax/
+  </p></div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons2"><a href="https://dax.axcora.com" class="inhe">COLLECTION PAGE</a></h3>
+  <p class="text-terminal">
+  To create a collection page, add a .md file in content/ folder. example content/posts.md → /posts/
+  </p></div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons2"><a href="https://dax.axcora.com" class="inhe">PUBLIC FOLDER</a></h3>
+  <p class="text-terminal">
+  To add static assets, put them in public/ folder. example public/css/style.css → /css/style.css
+  </p></div>
+  
+<div class="glass card-hov p-20">
+  <h3 class="mono neons2"><a href="https://dax.axcora.com" class="inhe">DEPLOY PROJECT</a></h3>
+  <p class="text-terminal">
+  To deploy your project, upload the site/ folder to your hosting. example vercel.json, netlify.toml, .github/workflows/deploy.yml are ready to use.
+  </p></div>
+  
+  </div>
+</section>
+<section id="docs" class="docs">
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-lg-1 col-0"></div>
+    <div class="col-lg-10 col-12">
+<div class="mono info">DOCUMENTATION — FULL GUIDE</div>
+<h2 class="title"><a href="https://dax.axcora.com" class="text-white">Complete DAX docs</a></h2>
+
+<div class="axcora-accordion open" onclick="this.classList.toggle('open')">
+  <div class="axcora-accordion-header"><span>1. What is DAX?</span><span>▼</span></div>
+  <div class="axcora-accordion-content">
+DAX = Pure C# Slim Static Site Generator. 1 file Program.cs ~800 lines. Inspired by CAX (C language) but rewritten for .NET ecosystem so Windows users don't need MinGW/make. Outputs pure HTML to site/ folder. No JS runtime, no WASM.
+
+Use case: blogs, docs, portfolios, landing pages where you need 50ms load and perfect SEO, not a dashboard app.</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>2. Requirements & Install (.NET SDK)</span><span>▼</span></div><div class="axcora-accordion-content">Requirements: .NET SDK 8.0 or 9.0 only.
+
+Windows: https://dotnet.microsoft.com/download → SDK 9.0 .exe → dotnet --version
+macOS: <code>brew install dotnet@9 or .pkg from site</code>
+Linux: <code>sudo apt install dotnet-sdk-9.0</code>
+
+Then Open terminal:
+<pre>git clone https://github.com/mesinkasir.dax.git
+cd dax
+dotnet run -- build  → builds to site/
+dotnet run -- start  → dev server http://localhost:8080/
+</pre>
+</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>3. Folder Structure Explained</span><span>▼</span></div><div class="axcora-accordion-content"><pre>│   Dax.csproj, Program.cs, README.md, vercel.json, netlify.toml
+├───.github/workflows/deploy.yml → GitHub Pages deploy
+├───_data/ → metadata.json, config.yaml, nav.json → auto DAX .NET Static Site Generator, 
+├───content/ → index.md → /, about.md → /about/, posts.md (collection controller) + posts/hello.md → /posts/hello-dax/
+├───templates/layouts/ → base.dax, home.dax, posts-list.dax, post.dax, tag.dax, tags-list.dax
+├───templates/partials/ → header.dax, footer.dax, seo.dax
+├───public/ → css/style.css, img/ → copied verbatim to site/
+└───site/ → generated output (gitignored)
+</pre>
+.gitignore must include: bin/, obj/, site/, *.exe, *.</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>4. Content & Frontmatter (Free Nested)</span><span>▼</span></div><div class="axcora-accordion-content">Any .md in content/ with frontmatter:
+<pre>
+---
+title: Hello DAX
+date: 2026-08-03
+tags: [csharp, dax]
+layout: minimal/post.dax
+hero:
+  title: Welcome
+  list:
+    - name: GitHub
+      url: https://github.com
+      meta: { icon: github, deep: { level: 3 } }
+image: /img/hero.jpg
+---
+
+# Markdown here → { { content }}
+
+In template: { { hero.title }}, { % for item in hero.list %}{ { item.name }} - { { item.meta.deep.level }}{ % endfor %}
+</pre>
+Unlimited nesting, no fixed schema like Blazor.</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>5. Templates, Loops & Includes</span><span>▼</span></div><div class="axcora-accordion-content">Base template: templates/layouts/base.dax contains  placeholder.
+<pre>
+Includes: { % include header.dax %}
+
+Loops: 
+{% for post in collections.posts limit:3 %}
+  { { post.title }} - { { post.date }}
+{ % endfor %}
+
+{ % for n in config.list %}
+  { { n.title }} → { { n.url }}
+{ % endfor %}
+
+Condition: { % if image %}< img src="{ { image }}" >{ % endif %}
+
+Variables: { { title }}, { { metadata.site_url }}, { { pagination.items }}, { { all_tags }}
+</pre>
+</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>6. Collections, Tags, Pagination, SEO</span><span>▼</span></div><div class="axcora-accordion-content">Collections: Any folder in content/ e.g. content/services/ → collections.services auto sorted by date desc.
+
+Controller file: content/posts.md
+<pre>
+---
+title: Blog
+layout: posts-list.dax
+collection: posts
+pagination: 6
+---
+</pre>
+→ Generates /posts/ + /posts/page/2/ + pagination.items, pagination.total_pages, pagination.prev_url, next_url
+
+Tags: any post with tags: [csharp] → /tags/ (all_tags) + /tags/csharp/ auto pages using tag.dax layout.
+
+SEO: sitemap.xml, robots.txt, rss.xml auto generated from collections.posts.
+
+Search watch excludes site/, bin/, obj/ to avoid infinite loop.
+
+</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>7. Why DAX slaps Blazor?</span><span>▼</span></div><div class="axcora-accordion-content">Blazor = SPA framework for interactive apps. Needs 512KB WASM download, _framework/blazor.web.js, boot time 2s, hydration mismatch risk, heavy for SEO.
+
+DAX = static output, 0KB JS, 50ms load, HTML only, Lighthouse 100.
+
+Benchmark: same blog
+Blazor: dotnet publish 8s, payload 512KB, first paint 2.1s
+DAX: dotnet run -- build 0.12s, payload 0KB JS, first paint 0.05s
+
+Use Blazor for dashboard. Use DAX for content that must be fast.</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>8. Deploy (GitHub Pages, Vercel, Netlify, Cloudflare)</span><span>▼</span></div><div class="axcora-accordion-content">GitHub Pages: .github/workflows/deploy.yml → dotnet build → upload site/ artifact → deploy-pages.
+
+Vercel: vercel.json
+<pre>
+{
+  "buildCommand": "dotnet publish -c Release -o bin && ./bin/DAX build",
+  "outputDirectory": "site"
+}
+</pre>
+
+Netlify: netlify.toml
+<pre>
+[build]
+  command = "dotnet publish -c Release -o bin && ./bin/DAX build"
+  publish = "site"
+</pre>
+Cloudflare Pages: same, output site/. No GCC needed unlike CAX.</div></div>
+
+</div>
+</section>
+<section class="container download" id="download">
+<h2 class="title"><a href="https://dax.axcora.com" class="text-white">
+Run and Try DAX SSG.</a></h2>
+<p class="text-download">MIT open source. Pick minimal (empty) or full blog template. Both work with dotnet run -- build.</p>
+<div class="download-section">
+<div class="glass p-20">
+  <div class="mono info">MINIMAL STARTER</div>
+<h3 class="mt-3">
+  <a href="https://dax.axcora.com" class="text-white">
+    Clean Minimalis Starter</a></h3>
+<p class="texts">
+  Get started in seconds. The official clean, minimal starter for DAX SSG — production-ready with _data/, content/, templates/, and public/ pre-configured. - 0KB JS. 50ms Load. Pure HTML + Axcora CSS. No bloat.
+</p>
+<pre class="mt-3">git clone https://github.com/mesinkasir/dax.git
+cd dax
+dotnet publish -c Release -o .
+dax build   // 11 pages 127ms
+dax start   // localhost:8080
+</pre>
+<p class="texts">Built for scale. Clean output, semantic HTML, and best practices baked in from day one.</p>
+<a href="/minimal/" class="glow-btn mt-5 mono btn-download">Run DAX Starter Minimal →</a></div>
+
+<div class="glass premium">
+  <div class="mono premium-info">DAX PRO</div>
+  <h3 class="mt-1">
+  <a href="https://dax.axcora.com" class="text-white">
+    Premium DAX Architecture Service</a></h3>
+    <img src="/img/c-staticsitegenerator.webp" loading="lazy" 
+    width="100%" height="100%" 
+    alt="Premium DAX Architecture Service" 
+    class="img-fluid mt-2"/>
+  <p class="texts mb-3">
+  Build your project with custom DAX architecture. From bespoke UI and advanced features to full AI and API integration — we handle it all. Our expert team is ready to turn your vision into reality. Let's solve your project challenges and build for a better future.
+  </p>
+<a href="hi@axcora.com" class="glow-btn mono btn-premium">Consult Now →</a>
+<a href="https://www.fiverr.com/creativitas/create-your-custom-website-and-app" class="glow-btn mt-2 mono btn-download">Hire Now →</a></div>
+</div>
+
+<div class="mono text-intro">PURE C# • 0 DEPS • MIT • RESPONSIVE • NO WASM</div>
+</section>
+
+<section class="container">
+<div class="axcora-col-12 axcora-col-lg-6">
+<div class="glass p-20">
+<div class="mono neons text-center">DEPLOY ANYWHERE</div>
+<div class="deploys">
+<div class="glass deploy-title">▲ Vercel<br>
+<span class="mono deploy-text">site/</span></div><div class="glass deploy-title">◍ Netlify<br>
+<span class="mono deploy-text">site/</span></div><div class="glass deploy-title">⬢ GitHub Pages<br>
+<span class="mono deploy-text">deploy.yml</span></div><div class="glass deploy-title">☁ Cloudflare<br>
+<span class="mono deploy-text">unlimited bw</span></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="container supports">
+<h2 class="title"><a href="https://dax.axcora.com" class="text-white">Stop shipping 500KB<br/>to show a blog..</h2>
+<p class="text-download">DAX is MIT. Clone,, <span class="mono neons">dotnet run -- build</span>, deploy. No WASM, no JS framework, just HTML that loads in 50ms.</p>
+<h3>Support DAX with Buy a cup of coffee</h3>
+<div class="row mt-5">
+<div class="col-lg-4 col-12">
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=JVZVXBC4N9DAN" class="glow-btn mono mt-1 mb-1 btn-download">Support Via PayPal →</a>
+</div>
+<div class="col-lg-4 col-12">
+<a href="https://creativitaz.gumroad.com/coffee" class="glow-btn mono btn-premium">Support Via Gumroad →</a>
+</div>
+<div class="col-lg-4 col-12">
+<a href="https://github.com/sponsors/mesinkasir" class="glow-btn mono mt-1 mb-1 btn-download">Support Via Github →</a>
+</div>
+</div>
+<div class="mono" style="margin-top:24px;font-size:11px;opacity:0.4;letter-spacing:2px">PURE C# • 0 DEPS • CMD NATIVE • BLAZOR KILLER</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/axcora-js@1.0.1/axcora.min.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>

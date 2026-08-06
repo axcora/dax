@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dax.axcora.com/sitemap.xml

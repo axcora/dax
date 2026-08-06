@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="fJTzwsNcz2AtRxQpJZzU7db7TLPdR_lKSAXfyWDtHB4">
+<meta name="google-site-verification" content="Xi3WpckDbMBvm1pdlc5XukNoA9uWDmnExIiOeaTOxq0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="DAX dotnet - Pure C# Slim SSG">
+<title>DAX Documentation</title>
+<meta name="description" content="Complete guide for DAX - Pure C# Static Site Generator. Zero dependency, blazing fast, bento-ready.">
+<link rel="canonical" href="https://dax.axcora.com/docs/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DAX .NET Static Site Generator">
+<meta property="og:title" content="DAX Documentation">
+<meta property="og:description" content="Complete guide for DAX - Pure C# Static Site Generator. Zero dependency, blazing fast, bento-ready.">
+<meta property="og:url" content="https://dax.axcora.com/docs/">
+<meta property="og:image" content="https://dax.axcora.com/img/dotnetstaticsite.webp">
+<meta property="og:image:alt" content="DAX Documentation">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DAX Documentation">
+<meta name="twitter:description" content="Complete guide for DAX - Pure C# Static Site Generator. Zero dependency, blazing fast, bento-ready.">
+<meta name="twitter:image" content="https://dax.axcora.com/img/dotnetstaticsite.webp">
+<meta name="twitter:image:alt" content="DAX Documentation">
+<link href="/img/daxlogopress.webp" rel="icon" type="image/x-icon">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DAX Documentation",
+  "description": "Complete guide for DAX - Pure C# Static Site Generator. Zero dependency, blazing fast, bento-ready.",
+  "url": "https://dax.axcora.com/docs/",
+  "image": "https://dax.axcora.com/img/dotnetstaticsite.webp",
+  "datePublished": "",
+  "author": {
+    "@type": "Person",
+    "name": "Axcora"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DAX .NET Static Site Generator",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dax.axcora.com//img/daxlogopress.webp"
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axcora-css@1.0.1/axcora.min.css">
+<link rel="stylesheet" href="/css/style.css">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6422989243541464" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar p-3 shadow-sm">
+<div class="container">
+  <a class="navbar-brand ms-3" href="https://dax.axcora.com">MINIMAL</a>
+  <button class="navbar-toggler text-dark" onclick="document.querySelector('.navbar-collapse').classList.toggle('show')">☰</button>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav mt-3">
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/minimal/">
+      Home</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/about/">
+      About</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/posts/">
+      Blog</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/docs/">
+      Docs</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/deploy/">
+      Deploy</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="https://creativitaz.gumroad.com/l/dax">
+      Download</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="https://github.com/mesinkasir/dax/">
+      Github</a></li>
+      
+    </ul>
+  </div>
+  </div>
+</nav>
+<header class="container p-3 mt-3">
+<h1 class="hero-title"><a href="/docs/">DAX Documentation</a></h1>
+<nav aria-label="breadcrumb" class="navbar">
+ <ul class="navbar-nav mt-3">
+      <li class="nav-item"><a class="nav-link text-dark" href="/minimal/">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="/docs/">DAX Documentation</a></li>
+    </ul>
+</nav>
+</header>
+<main class="container p-3">
+<img class="img-cover" 
+width="100%" height="100%"
+alt="DAX Documentation"
+src="/img/dotnetstaticsite.webp"
+/>
+<div class="bento">
+<div class="bento-card span-12">
+<h2>Complete guide for DAX - Pure C# Static Site Generator. Zero dependency, blazing fast, bento-ready.</h2>
+<div class="mt-3 content p-3">
+<h1>DAX - Dotnet by AXcora</h1>
+
+<p><strong>The fastest static starter. Clean bento grid, pure HTML + Axcora CSS. No build step required.</strong></p>
+
+<p>DAX is a pure C# Static Site Generator (SSG) inspired by Eleventy (11ty), Jekyll, and Astro. Zero Node.js, zero webpack, build hundreds of pages in milliseconds.</p>
+
+<ul><li><strong>Repo:</strong> https://dax.axcora.com</li>
+<li><strong>Version:</strong> 1.0.0</li>
+<li><strong>License:</strong> Open Source Forever</li>
+
+<h2>Quick Start</h2>
+
+<h3>Use dotnet slim version</h3>
+
+<pre><code>git clone https://github.com/mesinkasir/dax
+<p>cd dax</p>
+<p>dotnet run -- build</p>
+<p>dotnet run -- start</p>
+<p>open http://localhost:8080/</p>
+<p></code></pre></p>
+
+<h3>Use dax version</h3>
+
+<pre><code>git clone https://github.com/mesinkasir/dax
+<p>cd dax</p>
+<p>dotnet publish -c Release -o .</p>
+<p>dax build</p>
+<p>dax start</p>
+<p>open http://localhost:8080/</p>
+<p></code></pre></p>
+
+<h2>Folder Structure</h2>
+
+<pre><code>/
+<p>├── _data/              # Global data (JSON/YAML)</p>
+<p>│   ├── metadata.json</p>
+<p>│   ├── config.yaml</p>
+<p>│   └── nav.json</p>
+<p>├── content/            # Markdown content</p>
+<p>│   ├── index.md</p>
+<p>│   ├── posts.md        # Collection controller</p>
+<p>│   ├── tags.md</p>
+<p>│   └── posts/</p>
+<p>│       ├── hello.md</p>
+<p>│       └── ...</p>
+<p>├── templates/</p>
+<p>│   ├── layouts/        # Layouts (base, home, post, etc)</p>
+<p>│   │   ├── base.dax</p>
+<p>│   │   ├── minimal/</p>
+<p>│   │   │   ├── page.dax</p>
+<p>│   │   │   ├── post.dax</p>
+<p>│   │   │   └── blog.dax</p>
+<p>│   └── partials/       # Partials (header, footer, seo)</p>
+<p>│       ├── header.dax</p>
+<p>│       ├── footer.dax</p>
+<p>│       └── minimal/</p>
+<p>│           ├── bento1.dax</p>
+<p>│           ├── bento2.dax</p>
+<p>│           └── bento3.dax</p>
+<p>├── public/             # Static assets (copied to site/)</p>
+<p>│   ├── css/</p>
+<p>│   ├── img/logo/</p>
+<p>│   └── img/icon/</p>
+<p>└── site/               # Generated output</p>
+<p></code></pre></p>
+
+<h2>Frontmatter</h2>
+
+<p>Every <code>.md</code> file supports YAML frontmatter:</p>
+
+<pre><code>---
+<p>layout: minimal/page.dax</p>
+<p>title: My Page</p>
+<p>description: SEO description</p>
+<p>image: /img/og.jpg</p>
+<p>date: 2026-08-06</p>
+<p>tags: [csharp, dax, ssg]</p>
+<hr/>
+<p></code></pre></p>
+
+<p>Supported keys:</p>
+<li><code>layout</code> - Layout file in <code>templates/layouts/</code></li>
+<li><code>title</code>, <code>description</code>, <code>image</code> - SEO</li>
+<li><code>date</code> - For sorting collections</li>
+<li><code>tags</code> - Array or string <code>[a, b]</code> or <code>a, b</code></li>
+<li><code>collection</code> - Mark file as collection controller</li>
+<li><code>pagination</code> - Items per page (e.g. <code>6</code>)</li>
+
+<h2>Layouts vs Partials</h2>
+
+<p><strong>IMPORTANT - They are separated!</strong></p>
+
+<pre><code>// Layout - used via frontmatter
+<p>layout: minimal/blog.dax</p>
+<p>-&gt; loads from templates/layouts/minimal/blog.dax</p>
+<p>// Partial - used via include</p>
+<p>{ % include minimal/bento1.dax % }</p>
+<p>-&gt; loads from templates/partials/minimal/bento1.dax</p>
+<p></code></pre></p>
+
+<p>Even if names are same (<code>minimal/blog.dax</code>), they never collide.</p>
+
+<h2>Templating Engine</h2>
+
+<p>DAX uses Liquid-like syntax:</p>
+
+<h3>Variables</h3>
+
+<pre><code>{ { title } }
+<p>{ { metadata.title } }</p>
+<p>{ { config.site_name } }</p>
+<p>{ { page.url } }</p>
+<p>{ { content } }</p>
+<p></code></pre></p>
+
+<p>Fallback:</p>
+
+<pre><code>{ { image or metadata.image } }
+<p></code></pre></p>
+
+<h3>Includes</h3>
+
+<pre><code>{ % include header.dax % }
+<p>{ % include minimal/bento1.dax % }</p>
+<p></code></pre></p>
+
+<h3>If / Else</h3>
+
+<pre><code>{ % if title % }
+<p>&lt;h1&gt;{ { title } }&lt;/h1&gt;</p>
+<p>{ % endif % }</p>
+<p>{ % if pagination.has_prev % }</p>
+<p>&lt;a href=&quot;{ { pagination.prev_url } }&quot;&gt;Prev&lt;/a&gt;</p>
+<p>{ % endif % }</p>
+<p>{ % if prev_post % }</p>
+<p>&lt;a href=&quot;{ { prev_post.url } }&quot;&gt;{ { prev_post.title } }&lt;/a&gt;</p>
+<p>{ % endif % }</p>
+<p></code></pre></p>
+
+<p>Supports nested if:</p>
+
+<pre><code>{ % if prev_post % }
+<p>  { % if prev_post.image % }</p>
+<p>    &lt;img src=&quot;{ { prev_post.image } }&quot; /&gt;</p>
+<p>  { % endif % }</p>
+<p>  &lt;h3&gt;{ { prev_post.title } }&lt;/h3&gt;</p>
+<p>{ % endif % }</p>
+<p></code></pre></p>
+
+<p>Operators: <code>==</code>, <code>!=</code>, <code>or</code>, <code>and</code>, <code>||</code>, <code>&&</code></p>
+
+<h3>For Loop</h3>
+
+<pre><code>{ % for post in collections.posts % }
+<p>&lt;a href=&quot;{ { post.url } }&quot;&gt;{ { post.title } }&lt;/a&gt;</p>
+<p>{ % endfor % }</p>
+<p>{ % for post in collections.posts limit:3 % }</p>
+<p>{ % for t in all_tags % }</p>
+<p>{ { t.name } } ({ { t.count } })</p>
+<p>{ % endfor % }</p>
+<p></code></pre></p>
+
+<h2>Collections</h2>
+
+<p>Any folder inside <code>content/</code> becomes a collection.</p>
+
+<p><code>content/posts/my-post.md</code> -> collection <code>posts</code></p>
+
+<p>Create controller <code>content/posts.md</code>:</p>
+
+<pre><code>---
+<p>layout: posts-list.dax</p>
+<p>title: Blog</p>
+<p>collection: posts</p>
+<p>pagination: 6</p>
+<hr/>
+<p></code></pre></p>
+
+<p>Access in template:</p>
+
+<pre><code>{ { collections.posts } }
+<p>{ { pagination.items } }</p>
+<p>{ { pagination.current_page } }</p>
+<p>{ { pagination.total_pages } }</p>
+<p>{ { pagination.has_prev } }</p>
+<p>{ { pagination.has_next } }</p>
+<p>{ { pagination.prev_url } }</p>
+<p>{ { pagination.next_url } }</p>
+<p></code></pre></p>
+
+<h3>Pagination Template (Safe)</h3>
+
+<pre><code>{ % for post in pagination.items % }
+<p>&lt;div&gt;&lt;a href=&quot;{ { post.url } }&quot;&gt;{ { post.title } }&lt;/a&gt;&lt;/div&gt;</p>
+<p>{ % endfor % }</p>
+<p>&lt;div&gt;</p>
+<p>{ % if pagination.has_prev % }&lt;a href=&quot;{ { pagination.prev_url } }&quot;&gt;Prev&lt;/a&gt;{ % endif % }</p>
+<p>Page { { pagination.current_page } }/{ { pagination.total_pages } }</p>
+<p>{ % if pagination.has_next % }&lt;a href=&quot;{ { pagination.next_url } }&quot;&gt;Next&lt;/a&gt;{ % endif % }</p>
+<p>&lt;/div&gt;</p>
+<p></code></pre></p>
+
+<h2>Prev / Next Post</h2>
+
+<p>In <code>post.dax</code> layout:</p>
+
+<pre><code>{ % if has_prev % }
+<p>&lt;a href=&quot;{ { prev_post.url } }&quot;&gt;Prev { { prev_post.title } }&lt;/a&gt;</p>
+<p>{ % endif % }</p>
+<p>{ % if has_next % }</p>
+<p>&lt;a href=&quot;{ { next_post.url } }&quot;&gt;{ { next_post.title } } Next&lt;/a&gt;</p>
+<p>{ % endif % }</p>
+<p></code></pre></p>
+
+<p>Or full card:</p>
+
+<pre><code>&lt;div class=&quot;row&quot;&gt;
+<p>&lt;div class=&quot;col-6&quot;&gt;</p>
+<p>{ % if prev_post % }</p>
+<p>&lt;a href=&quot;{ { prev_post.url } }&quot;&gt;</p>
+<p>{ % if prev_post.image % }&lt;img src=&quot;{ { prev_post.image or metadata.image } }&quot; /&gt;{ % endif % }</p>
+<p>&lt;h3&gt;{ { prev_post.title } }&lt;/h3&gt;</p>
+<p>&lt;/a&gt;</p>
+<p>{ % endif % }</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;div class=&quot;col-6&quot;&gt;</p>
+<p>{ % if next_post % }</p>
+<p>&lt;a href=&quot;{ { next_post.url } }&quot;&gt;</p>
+<p>{ % if next_post.image % }&lt;img src=&quot;{ { next_post.image or metadata.image } }&quot; /&gt;{ % endif % }</p>
+<p>&lt;h3&gt;{ { next_post.title } }&lt;/h3&gt;</p>
+<p>&lt;/a&gt;</p>
+<p>{ % endif % }</p>
+<p>&lt;/div&gt;</p>
+<p>&lt;/div&gt;</p>
+<p></code></pre></p>
+
+<h2>Tags</h2>
+
+<p>Add tags in frontmatter:</p>
+
+<pre><code>tags: [csharp, dax, tutorial]
+<p></code></pre></p>
+
+<p>Templates:</p>
+
+<pre><code>{ % for tag in tags % }{ { tag } }{ % endfor % }
+<p>{ % for t in all_tags % }</p>
+<p>&lt;a href=&quot;{ { t.url } }&quot;&gt;{ { t.name } } ({ { t.count } })&lt;/a&gt;</p>
+<p>{ % endfor % }</p>
+<p></code></pre></p>
+
+<p>Auto generates:</p>
+<li><code>/tags/</code> - All tags list</li>
+<li><code>/tags/{slug}/</code> - Tag pages</li>
+
+<h2>Global Data</h2>
+
+<p>Files in <code>_data/</code> are auto-loaded:</p>
+
+<p><code>_data/config.yaml</code>:</p>
+<pre><code>site_name: DAX
+<p>pagination_default: 6</p>
+<p>list:</p>
+<p>  - title: Blog</p>
+<p>    url: /blog/</p>
+<p></code></pre></p>
+
+<p>Use:</p>
+
+<pre><code>{ { config.site_name } }
+<p>{ % for c in config.list % }{ { c.title } }{ % endfor % }</p>
+<p></code></pre></p>
+
+<p><code>_data/metadata.json</code>:</p>
+<pre><code>{&quot;site&quot;:{&quot;title&quot;:&quot;DAX&quot;,&quot;url&quot;:&quot;http://localhost:8080&quot;}}
+<p></code></pre></p>
+<pre><code>{ { metadata.title } }
+<p>{ { site.url } }</p>
+<p></code></pre></p>
+
+<h2>SEO</h2>
+
+<p><code>seo.dax</code> partial auto included:</p>
+
+<pre><code>&lt;title&gt;{ { title } } - { { metadata.title } }&lt;/title&gt;
+<p>&lt;meta name=&quot;description&quot; content=&quot;{ { description } }&quot;&gt;</p>
+<p>&lt;link rel=&quot;canonical&quot; href=&quot;{ { site.url } }{ { url } }&quot;&gt;</p>
+<p></code></pre></p>
+
+<p>Auto generates:</p>
+<li><code>/sitemap.xml</code></li>
+<li><code>/robots.txt</code></li>
+<li><code>/rss.xml</code></li>
+
+<h2>Public Assets</h2>
+
+<p>Everything in <code>public/</code> is copied to <code>site/</code>:</p>
+
+<pre><code>public/img/logo/logo.webp -&gt; site/img/logo/logo.webp
+<p>public/css/style.css -&gt; site/css/style.css</p>
+<p></code></pre></p>
+
+<p><strong>IMPORTANT:</strong> Always place images in <code>public/img/...</code> not <code>site/</code>.</p>
+
+<p>Supported MIME types in dev server:</p>
+<li><code>.css</code>, <code>.js</code>, <code>.json</code>, <code>.svg</code>, <code>.webp</code>, <code>.png</code>, <code>.jpg</code>, <code>.gif</code>, <code>.ico</code>, <code>.woff2</code></li>
+
+<h2>Bento Grid Example</h2>
+
+<p><code>content/minimal.md</code>:</p>
+
+<pre><code>---
+<p>layout: minimal.dax</p>
+<p>bento1:</p>
+<p>  title: Launch in 30 Seconds</p>
+<p>  image: /img/logo/dax-csharp-2.webp</p>
+<p>bento3:</p>
+<p>  item:</p>
+<p>    - icon: /img/icon/fast.svg</p>
+<p>      title: Blazing Fast</p>
+<hr/>
+<p></code></pre></p>
+
+<h2>CLI Commands</h2>
+
+<pre><code>dotnet run -- init   # create starter structure
+<p>dotnet run -- build  # build to site/</p>
+<p>dotnet run -- start  # build + serve at :8080 with watcher</p>
+<p></code></pre></p>
+
+<h2>Troubleshooting</h2>
+
+<p><strong>Image not loading?</strong></p>
+<li>Check file exists in <code>public/img/...</code></li>
+<li>Check MIME type in <code>DaxServer.cs</code> <code>GetMimeType()</code></li>
+<li>Rename files without <code>#</code>, spaces, <code>( )</code></li>
+
+<p><strong>Icon not showing?</strong></p>
+<li>Check <code>site/img/icon/fast.svg</code> exists after build</li>
+<li>Ensure <code>public/img/icon/</code> has files</li>
+
+<p><strong><code>{ % endif % }</code> leaking?</strong></p>
+<li>Update <code>DaxEngine.RenderIfs</code> to nested-safe version</li>
+
+<p><strong>Layout vs Partial collision?</strong></p>
+<li>Layouts load from <code>templates/layouts/</code></li>
+<li>Partials load from <code>templates/partials/</code></li>
+<li>Engine now separated: <code>LoadLayout()</code> vs <code>LoadPartial()</code></li>
+
+<p><strong>Pagination prev/next broken on first/last?</strong></p>
+<li>Use <code>has_prev</code> / <code>has_next</code> boolean, not <code>prev_url != ""</code></li>
+
+<p></ul><pre><code>{ % if pagination.has_prev % }...{ % endif % }</p>
+<p></code></pre></p>
+
+<h2>Credits</h2>
+
+<p>Built with pure .NET by AXcora.</p>
+<p>CSS by Axcora CSS - Bento Grid System.</p>
+<p>Inspired by 11ty and Jekyll.</p>
+
+<p>Support: <a href="https://github.com/sponsors/mesinkasir">https://github.com/sponsors/mesinkasir</a></p>
+
+</div>
+</div>
+</div>
+</main>
+<footer class="container text-center">
+<p>
+MINIMAL built with <a href="https://dax.axcora.com">DAX</a>.
+</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axcora-js@1.0.1/axcora.min.js" defer></script>
+</body>
+</html>

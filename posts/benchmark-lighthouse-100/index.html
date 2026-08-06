@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="fJTzwsNcz2AtRxQpJZzU7db7TLPdR_lKSAXfyWDtHB4">
+<meta name="google-site-verification" content="Xi3WpckDbMBvm1pdlc5XukNoA9uWDmnExIiOeaTOxq0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="generator" content="DAX dotnet - Pure C# Slim SSG">
+<title>DAX Benchmark - 50ms Load, 0KB JS, Lighthouse 100</title>
+<meta name="description" content="Performance benchmark DAX vs Blazor vs Hugo vs Jekyll - why 0KB JS matters for SEO">
+<link rel="canonical" href="https://dax.axcora.com/posts/benchmark-lighthouse-100/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="DAX .NET Static Site Generator">
+<meta property="og:title" content="DAX Benchmark - 50ms Load, 0KB JS, Lighthouse 100">
+<meta property="og:description" content="Performance benchmark DAX vs Blazor vs Hugo vs Jekyll - why 0KB JS matters for SEO">
+<meta property="og:url" content="https://dax.axcora.com/posts/benchmark-lighthouse-100/">
+<meta property="og:image" content="https://dax.axcora.com/img/microsoftssg.webp">
+<meta property="og:image:alt" content="DAX Benchmark - 50ms Load, 0KB JS, Lighthouse 100">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="DAX Benchmark - 50ms Load, 0KB JS, Lighthouse 100">
+<meta name="twitter:description" content="Performance benchmark DAX vs Blazor vs Hugo vs Jekyll - why 0KB JS matters for SEO">
+<meta name="twitter:image" content="https://dax.axcora.com/img/microsoftssg.webp">
+<meta name="twitter:image:alt" content="DAX Benchmark - 50ms Load, 0KB JS, Lighthouse 100">
+<link href="/img/daxlogopress.webp" rel="icon" type="image/x-icon">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "DAX Benchmark - 50ms Load, 0KB JS, Lighthouse 100",
+  "description": "Performance benchmark DAX vs Blazor vs Hugo vs Jekyll - why 0KB JS matters for SEO",
+  "url": "https://dax.axcora.com/posts/benchmark-lighthouse-100/",
+  "image": "https://dax.axcora.com/img/microsoftssg.webp",
+  "datePublished": "2026-07-28",
+  "author": {
+    "@type": "Person",
+    "name": "Axcora"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "DAX .NET Static Site Generator",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://dax.axcora.com//img/daxlogopress.webp"
+    }
+  }
+}
+</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axcora-css@1.0.1/axcora.min.css">
+<link rel="stylesheet" href="/css/style.css">
+<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6422989243541464" crossorigin="anonymous"></script>
+</head>
+<body>
+<nav class="navbar p-3 shadow-sm">
+<div class="container">
+  <a class="navbar-brand ms-3" href="https://dax.axcora.com">MINIMAL</a>
+  <button class="navbar-toggler text-dark" onclick="document.querySelector('.navbar-collapse').classList.toggle('show')">☰</button>
+  <div class="navbar-collapse">
+    <ul class="navbar-nav mt-3">
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/minimal/">
+      Home</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/about/">
+      About</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/posts/">
+      Blog</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/docs/">
+      Docs</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="/deploy/">
+      Deploy</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="https://creativitaz.gumroad.com/l/dax">
+      Download</a></li>
+      
+      <li class="nav-item"><a class="nav-link text-dark" href="https://github.com/mesinkasir/dax/">
+      Github</a></li>
+      
+    </ul>
+  </div>
+  </div>
+</nav>
+<header class="container p-3 mt-3">
+<h1 class="hero-title"><a href="/posts/benchmark-lighthouse-100/">DAX Benchmark - 50ms Load, 0KB JS, Lighthouse 100</a></h1>
+<nav aria-label="breadcrumb" class="navbar">
+ <ul class="navbar-nav mt-3">
+      <li class="nav-item"><a class="nav-link text-dark" href="/minimal/">Home</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="/posts/">Blog</a></li>
+      <li class="nav-item"><a class="nav-link text-dark" href="/posts/benchmark-lighthouse-100/">DAX Benchmark - 50ms Load, 0KB JS, Lighthouse 100</a></li>
+    </ul>
+</nav>
+</header>
+<main class="container p-3">
+<img class="img-cover" 
+width="100%" height="100%"
+alt="DAX Benchmark - 50ms Load, 0KB JS, Lighthouse 100"
+src="/img/microsoftssg.webp"
+/>
+<div class="bento">
+<div class="bento-card span-8">
+<div class="metadate">Publish at : 2026-07-28</div>
+<h2 class="article-title"><a href="/posts/benchmark-lighthouse-100/">Performance benchmark DAX vs Blazor vs Hugo vs Jekyll - why 0KB JS matters for SEO</a></h2>
+<div class="mt-3 p-5 content">
+<h2>Benchmark</h2>
+
+<p>Same blog with 11 pages:</p>
+
+<div class="table-responsive"><table>
+<thead><tr>
+<th>Generator</th>
+<th>Build Time</th>
+<th>JS Payload</th>
+<th>First Paint</th>
+<th>Lighthouse</th>
+<p></tr></thead></p>
+<tbody>
+<tr>
+<td>DAX</td>
+<td>127ms</td>
+<td>0KB</td>
+<td>50ms</td>
+<td>100</td>
+<p></tr></p>
+<tr>
+<td>CAX (C)</td>
+<td>1.2s + gcc</td>
+<td>0KB</td>
+<td>50ms</td>
+<td>100</td>
+<p></tr></p>
+<tr>
+<td>Blazor</td>
+<td>8s</td>
+<td>512KB WASM</td>
+<td>2100ms</td>
+<td>78</td>
+<p></tr></p>
+<tr>
+<td>Jekyll</td>
+<td>2.1s + ruby</td>
+<td>15KB</td>
+<td>120ms</td>
+<td>92</td>
+<p></tr></p>
+<p></tbody></table></div></p>
+<h3>Why 0KB matters?</h3>
+
+<ul><li>No JS = no parse, no hydration, instant SEO crawl</li>
+<li>No WASM boot = no 2s blank screen</li>
+<li>CDN friendly, edge cache 100%</li>
+
+<p></ul><blockquote>DAX is not for apps. DAX is for content that must be fast and rank.</blockquote></p>
+
+<p>Slim philosophy: <strong>No bloat, no node_modules, no overhead.</strong></p>
+
+</div>
+<div class="row mt-5">
+
+<div class="col-lg-6 col-6 p-2">
+
+<a 
+href="/posts/deploy-vercel-netlify-github-pages/">
+<img class="img-post mb-3" 
+width="100%" height="100%"
+alt="Deploy DAX to Vercel, Netlify, GitHub Pages and Cloudflare - No GCC Needed"
+src="/img/dotnetstaticsite.webp"
+/>
+<div class="p-3">
+<h3>Deploy DAX to Vercel, Netlify, GitHub Pages and Cloudflare - No GCC Needed</h3>
+<p>How to deploy DAX pure C# SSG to modern hosts - works because dotnet preinstalled</p>
+</div>
+</a>
+
+</div>
+
+<div class="col-lg-6 col-6 p-2">
+
+<a 
+href="/posts/service-pwa-progressive-web-app/">
+<img class="img-post mb-3" 
+width="100%" height="100%"
+alt="Design Your Website with Progressive Web Application - DAX PWA Service"
+src="/img/c-cleanssg.webp"
+/>
+<div class="p-3 text-end">
+<h3>Design Your Website with Progressive Web Application - DAX PWA Service</h3>
+PWA service with DAX + Axcora CSS - fast, installable, offline ready - alternative to heavy Blazor PWA
+</a>
+</div>
+
+</div>
+</div>
+</div>
+<div class="bento-card span-4 trans">
+<h3>About</h3>
+<img src="/img/dax-primary-logo.webp" 
+alt="DAX .NET Static Site Generator" class="img-thumbnail mt-2 mb-3">
+<h3>DAX .NET Static Site Generator</h3>
+<p>DAX is a slim .NET SSG. Build static sites 50x faster than Blazor SSG. No WASM bloat, just pure static HTML. For .NET devs who hate Blazor slow.</p>
+<h3 class="mt-5">Lastest Post</h3>
+
+<a href="/posts/hello-dax-pure-csharp-slim-ssg//">
+<img class="img-fluid" alt="Hello DAX - Pure C# Slim Static Site Generator That Slaps Blazor Bloat" 
+width="100%" height="100%"
+src="/img/c-staticsitegenerator.webp"/></a> 
+<h3>Hello DAX - Pure C# Slim Static Site Generator That Slaps Blazor Bloat</h3>
+
+<a href="/posts/vs-cax-c-vs-csharp//">
+<img class="img-fluid" alt="DAX vs CAX - Why C# Beats C for Windows Developers" 
+width="100%" height="100%"
+src="/img/balzorkiller.webp"/></a> 
+<h3>DAX vs CAX - Why C# Beats C for Windows Developers</h3>
+
+<a href="/posts/auto-collections-free-nested-frontmatter//">
+<img class="img-fluid" alt="Auto Collections and Free Nested Frontmatter - Jekyll Style but Faster" 
+width="100%" height="100%"
+src="/img/razorkiller.webp"/></a> 
+<h3>Auto Collections and Free Nested Frontmatter - Jekyll Style but Faster</h3>
+
+<h3 class="mt-5">Tags</h3>
+
+<a href="/tags/service/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+service
+</a>
+<a href="/tags/ecommerce/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+ecommerce
+</a>
+<a href="/tags/headless/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+headless
+</a>
+<a href="/tags/fiverr/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+fiverr
+</a>
+<a href="/tags/shopify/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+shopify
+</a>
+<a href="/tags/tutorial/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+tutorial
+</a>
+<a href="/tags/collections/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+collections
+</a>
+<a href="/tags/frontmatter/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+frontmatter
+</a>
+<a href="/tags/jekyll/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+jekyll
+</a>
+<a href="/tags/comparison/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+comparison
+</a>
+<a href="/tags/cax/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+cax
+</a>
+<a href="/tags/csharp/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+csharp
+</a>
+<a href="/tags/windows/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+windows
+</a>
+<a href="/tags/dax/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+dax
+</a>
+<a href="/tags/ssg/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+ssg
+</a>
+<a href="/tags/blazor/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+blazor
+</a>
+<a href="/tags/performance/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+performance
+</a>
+<a href="/tags/pwa/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+pwa
+</a>
+<a href="/tags/progressive-web-app/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+progressive-web-app
+</a>
+<a href="/tags/docs/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+docs
+</a>
+<a href="/tags/structure/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+structure
+</a>
+<a href="/tags/beginner/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+beginner
+</a>
+<a href="/tags/migration/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+migration
+</a>
+<a href="/tags/modern-website/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+modern-website
+</a>
+<a href="/tags/benchmark/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+benchmark
+</a>
+<a href="/tags/lighthouse/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+lighthouse
+</a>
+<a href="/tags/seo/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+seo
+</a>
+<a href="/tags/deploy/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+deploy
+</a>
+<a href="/tags/vercel/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+vercel
+</a>
+<a href="/tags/netlify/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+netlify
+</a>
+<a href="/tags/github-pages/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+github-pages
+</a>
+<a href="/tags/tags/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+tags
+</a>
+<a href="/tags/pagination/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
+pagination
+</a>
+</div>
+</div>
+</main>
+<footer class="container text-center">
+<p>
+MINIMAL built with <a href="https://dax.axcora.com">DAX</a>.
+</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/axcora-js@1.0.1/axcora.min.js" defer></script>
+</body>
+</html>
