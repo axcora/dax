@@ -1,0 +1,14 @@
+<div class="bento-card span-4 bg-dark">
+<h2 class="text-center">{{start.title}}</h2>
+<pre>
+# open terminal
+git clone https://github.com/mesinkasir/dax.git
+cd dax
+dotnet publish -c Release -o .
+dax build
+dax start
+open localhost:8080
+</pre>
+<p>{{start.text}}</p>
+<a href="{{start.button.url}}" class="btn btn-light">{{start.button.text}}</a>
+</div>

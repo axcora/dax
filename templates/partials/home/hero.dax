@@ -1,0 +1,16 @@
+<header class="hero">
+<div class="hero-content">
+<div class="badge mono">⚡ {{hero.info}}</div>
+<h1 class="h1">{{hero.title1}}<br><span>{{hero.title2}}</span><br>
+<a href="{{metadata.url}}">{{hero.title3}}</a></h1>
+<p class="texts"><p>{{hero.intro}}</p>
+<p>{{hero.description.info1}}
+<span class="mono neons">{{hero.description.info2}}</span> → {{hero.description.info3}}</p>
+<div class="cta-row">
+<a href="{{hero.button_primary.url}}" class="glow-btn mono">{{hero.button_primary.text}}</a>
+<a href="{{hero.button_secondary.url}}" class="outline mono">{{hero.button_secondary.text}}?</a>
+</div>
+<div class="meta-row mono">{% for s in hero.list %}<span>◍ {{s.info}}</span>{% endfor %}</div>
+{% include home/terminal.dax %}
+</div>
+</header>

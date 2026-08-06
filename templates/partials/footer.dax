@@ -1,0 +1,1 @@
+<footer><hr><p>DAX - Pure C# SSG | {{ metadata.author.name }} | {{ config.site_name }}</p></footer>

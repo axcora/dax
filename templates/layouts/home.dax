@@ -1,0 +1,37 @@
+---
+layout: base.dax
+---
+<h1>{{ title }}</h1>
+<p>{{ metadata.description }}</p>
+<div>{{ content }}</div>
+
+{% if image %}
+<img src="{{image}}"/>
+{% endif %}
+<p>
+<h3>YAML</h3>
+{% for c in config.list %}
+<li>{{c.title}} - {{c.url}}</li>
+{% endfor %}
+</p>
+<h3>JSON</h3>
+{% for s in hero.list %}
+<li>{{s.name}} - {{s.url}}<br/></li>
+{% endfor %}
+
+<h2>Latest Posts</h2>
+{% for post in collections.posts limit:3 %}
+<div><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.description }}</div>
+{% endfor %}
+
+
+<h2>Latest services</h2>
+{% for post in collections.services limit:3 %}
+<div><a href="{{ post.url }}">{{ post.title }}</a> - {{ post.description }}</div>
+{% endfor %}
+
+
+<h2>Tags</h2>
+{% for tag in tags limit:3 %}
+<a href="/tags/{{tag}}">{{tag}}</a>
+{% endfor %}

@@ -1,0 +1,32 @@
+<div class="term-wrap float">
+<div class="term">
+<div class="term-head">
+<span class="dot" style="background:#ff5f56"></span>
+<span class="dot" style="background:#ffbd2e"></span><span class="dot" style="background:#27c93f"></span>
+<span class="mono" style="margin-left:8px;font-size:10px;opacity:0.4">
+axcora@dotnet_ssg ~/dax</span></div>
+<div class="term-body"># dax version
+$ git clone https://github.com/mesinkasir/dax.git
+$ cd dax
+$ dotnet publish -c Release -o .
+$ dax build         # upload your site folder on hosting
+$ dax start         # run on your localhost:8080
+
+# slim version
+$ git clone https://github.com/mesinkasir/dax.git
+$ cd dax
+$ dotnet run -- build         # upload your site folder on hosting
+$ dotnet run -- start         # run on your localhost:8080
+
+$ dax build
+[DAX] loaded yaml: config
+[DAX] built / → home.dax
+[DAX] built /posts/hello-dax/ → post.dax
+[DAX] built /tags/csharp/ → tag.dax
+[DAX] built sitemap.xml + rss.xml
+[DAX] 11 pages in 127ms ✓
+
+$ dax start
+→ http://localhost:8080/ watching...<span class="cursor"></span></div>
+</div>
+</div>

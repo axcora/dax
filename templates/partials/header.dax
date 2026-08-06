@@ -1,0 +1,5 @@
+<header><nav>
+{% for n in config.list %}
+<a href="{{n.url}}">{{n.title}}</a>
+{% endfor %}
+</nav><hr></header>

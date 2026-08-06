@@ -1,0 +1,14 @@
+<section class="container">
+<div class="axcora-col-12 axcora-col-lg-6">
+<div class="glass p-20">
+<div class="mono neons text-center">{{deploy.title}}</div>
+<div class="deploys">
+{% for j in deploy.list %}<div class="glass deploy-title">{{j.title}}<br>
+<span class="mono deploy-text">{{j.text}}</span></div>{% endfor %}
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>

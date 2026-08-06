@@ -1,0 +1,23 @@
+title: "DAX .NET Static Site Generator"
+description: "DAX is a slim .NET SSG. Build static sites 50x faster than Blazor SSG. No WASM bloat, just pure static HTML. For .NET devs who hate Blazor slow."
+image: /img/dax-logo-primary.webp
+icon: /img/daxlogopress.webp
+author: Axcora
+url: https://dax.axcora.com
+
+navbar: 
+  title: DAX.NET.SSG
+  list: 
+    - title: FEATURES
+      url: "#features"
+    - title: VS BLAZOR
+      url: "#compare"
+    - title: GET STARTED
+      url: "#get-started"
+    - title: DOCS
+      url: "#docs"
+    - title: DOWNLOAD
+      url: "#download"
+  button: 
+    text: GITHUB
+    url: https://github.com/mesinkasir/dax/

@@ -1,0 +1,15 @@
+---
+layout: base.dax
+---
+<article>
+<h1>{{ title }}</h1>
+{% if image %}
+<img src="{{image}}"/>
+{% endif %}
+<p><em>{{ date }}</em></p>
+<div>{{ content }}</div>
+<p>Tags: {% for tag in tags %}<a href="/tags/{{ tag }}/">{{ tag }}</a> {% endfor %}</p>
+{% if prev_post %}<a href="{{ prev_post.url }}">{{ prev_post.title }}</a>{% endif %}
+{% if next_post and prev_post %} | {% endif %}
+{% if next_post %}<a href="{{ next_post.url }}">{{ next_post.title }}</a>{% endif %}
+</article>

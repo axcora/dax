@@ -1,0 +1,15 @@
+<nav class="navbar">
+<div class="nav-inner">
+  <img class="img-repsonsive" 
+  src="{{metadata.icon}}" width="40" height="40" loading="eager" alt="{{metadata.title}}"/>
+  <div class="mono text-nav">
+  {{metadata.navbar.title}}</div>
+<div class="nav-links" id="navLinks">
+{% for n in metadata.navbar.list %}<a href="{{n.url}}">{{n.title}}</a>{% endfor %}
+<a href="{{metadata.navbar.button.url}}" class="btn-neon mono">{{metadata.navbar.button.text}}</a>
+</div>
+<button class="ham mono" aria-label="Menu" id="ham">
+<svg fill="#ffffff" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1792 1792" xml:space="preserve" stroke="#ffffff"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>fiction</title> <path d="M1673.9,1363.2L1673.9,1363.2c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0 c0-52.3,42.4-94.3,94.3-94.3h1366.8C1631.5,1268.5,1673.9,1310.9,1673.9,1363.2z"></path> <path d="M1673.9,895.6L1673.9,895.6c0,52.3-42.4,94.3-94.3,94.3H659c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h920.6C1631.5,800.8,1673.9,843.2,1673.9,895.6z"></path> <path d="M1673.9,427.9L1673.9,427.9c0,52.3-42.4,94.3-94.3,94.3H212.7c-52.3,0-94.3-42.4-94.3-94.3l0,0c0-52.3,42.4-94.3,94.3-94.3 h1366.8C1631.5,333.2,1673.9,375.6,1673.9,427.9z"></path> </g></svg>
+</button>
+</div>
+</nav>

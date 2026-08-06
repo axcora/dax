@@ -1,0 +1,132 @@
+<section id="docs" class="docs">
+<div class="container mt-5 mb-5">
+  <div class="row">
+    <div class="col-lg-1 col-0"></div>
+    <div class="col-lg-10 col-12">
+<div class="mono info">{{docs.info}}</div>
+<h2 class="title"><a href="{{metadata.url}}" class="text-white">{{docs.title}}</a></h2>
+
+<div class="axcora-accordion open" onclick="this.classList.toggle('open')">
+  <div class="axcora-accordion-header"><span>1. What is DAX?</span><span>▼</span></div>
+  <div class="axcora-accordion-content">
+DAX = Pure C# Slim Static Site Generator. 1 file Program.cs ~800 lines. Inspired by CAX (C language) but rewritten for .NET ecosystem so Windows users don't need MinGW/make. Outputs pure HTML to site/ folder. No JS runtime, no WASM.
+
+Use case: blogs, docs, portfolios, landing pages where you need 50ms load and perfect SEO, not a dashboard app.</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>2. Requirements & Install (.NET SDK)</span><span>▼</span></div><div class="axcora-accordion-content">Requirements: .NET SDK 8.0 or 9.0 only.
+
+Windows: https://dotnet.microsoft.com/download → SDK 9.0 .exe → dotnet --version
+macOS: <code>brew install dotnet@9 or .pkg from site</code>
+Linux: <code>sudo apt install dotnet-sdk-9.0</code>
+
+Then Open terminal:
+<pre>git clone https://github.com/mesinkasir.dax.git
+cd dax
+dotnet run -- build  → builds to site/
+dotnet run -- start  → dev server http://localhost:8080/
+</pre>
+</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>3. Folder Structure Explained</span><span>▼</span></div><div class="axcora-accordion-content"><pre>│   Dax.csproj, Program.cs, README.md, vercel.json, netlify.toml
+├───.github/workflows/deploy.yml → GitHub Pages deploy
+├───_data/ → metadata.json, config.yaml, nav.json → auto {{ metadata.title }}, {{ config.list }}
+├───content/ → index.md → /, about.md → /about/, posts.md (collection controller) + posts/hello.md → /posts/hello-dax/
+├───templates/layouts/ → base.dax, home.dax, posts-list.dax, post.dax, tag.dax, tags-list.dax
+├───templates/partials/ → header.dax, footer.dax, seo.dax
+├───public/ → css/style.css, img/ → copied verbatim to site/
+└───site/ → generated output (gitignored)
+</pre>
+.gitignore must include: bin/, obj/, site/, *.exe, *.</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>4. Content & Frontmatter (Free Nested)</span><span>▼</span></div><div class="axcora-accordion-content">Any .md in content/ with frontmatter:
+<pre>
+---
+title: Hello DAX
+date: 2026-08-03
+tags: [csharp, dax]
+layout: minimal/post.dax
+hero:
+  title: Welcome
+  list:
+    - name: GitHub
+      url: https://github.com
+      meta: { icon: github, deep: { level: 3 } }
+image: /img/hero.jpg
+---
+
+# Markdown here → { { content }}
+
+In template: { { hero.title }}, { % for item in hero.list %}{ { item.name }} - { { item.meta.deep.level }}{ % endfor %}
+</pre>
+Unlimited nesting, no fixed schema like Blazor.</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>5. Templates, Loops & Includes</span><span>▼</span></div><div class="axcora-accordion-content">Base template: templates/layouts/base.dax contains {{ content }} placeholder.
+<pre>
+Includes: { % include header.dax %}
+
+Loops: 
+{% for post in collections.posts limit:3 %}
+  { { post.title }} - { { post.date }}
+{ % endfor %}
+
+{ % for n in config.list %}
+  { { n.title }} → { { n.url }}
+{ % endfor %}
+
+Condition: { % if image %}< img src="{ { image }}" >{ % endif %}
+
+Variables: { { title }}, { { metadata.site_url }}, { { pagination.items }}, { { all_tags }}
+</pre>
+</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>6. Collections, Tags, Pagination, SEO</span><span>▼</span></div><div class="axcora-accordion-content">Collections: Any folder in content/ e.g. content/services/ → collections.services auto sorted by date desc.
+
+Controller file: content/posts.md
+<pre>
+---
+title: Blog
+layout: posts-list.dax
+collection: posts
+pagination: 6
+---
+</pre>
+→ Generates /posts/ + /posts/page/2/ + pagination.items, pagination.total_pages, pagination.prev_url, next_url
+
+Tags: any post with tags: [csharp] → /tags/ (all_tags) + /tags/csharp/ auto pages using tag.dax layout.
+
+SEO: sitemap.xml, robots.txt, rss.xml auto generated from collections.posts.
+
+Search watch excludes site/, bin/, obj/ to avoid infinite loop.
+
+</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>7. Why DAX slaps Blazor?</span><span>▼</span></div><div class="axcora-accordion-content">Blazor = SPA framework for interactive apps. Needs 512KB WASM download, _framework/blazor.web.js, boot time 2s, hydration mismatch risk, heavy for SEO.
+
+DAX = static output, 0KB JS, 50ms load, HTML only, Lighthouse 100.
+
+Benchmark: same blog
+Blazor: dotnet publish 8s, payload 512KB, first paint 2.1s
+DAX: dotnet run -- build 0.12s, payload 0KB JS, first paint 0.05s
+
+Use Blazor for dashboard. Use DAX for content that must be fast.</div></div>
+
+<div class="axcora-accordion" onclick="this.classList.toggle('open')"><div class="axcora-accordion-header"><span>8. Deploy (GitHub Pages, Vercel, Netlify, Cloudflare)</span><span>▼</span></div><div class="axcora-accordion-content">GitHub Pages: .github/workflows/deploy.yml → dotnet build → upload site/ artifact → deploy-pages.
+
+Vercel: vercel.json
+<pre>
+{
+  "buildCommand": "dotnet publish -c Release -o bin && ./bin/DAX build",
+  "outputDirectory": "site"
+}
+</pre>
+
+Netlify: netlify.toml
+<pre>
+[build]
+  command = "dotnet publish -c Release -o bin && ./bin/DAX build"
+  publish = "site"
+</pre>
+Cloudflare Pages: same, output site/. No GCC needed unlike CAX.</div></div>
+
+</div>
+</section>

@@ -1,0 +1,17 @@
+<section class="container mt-5 mb-5" id="compare">
+  <div class="mono info">{{compare.info}}</div>
+<h2 class="title"><a href="{{metadata.url}}" class="text-white">
+  {{compare.title}}
+</a></h2>
+<div class="compare glass">
+<table>
+<tr><th></th><th>DAX Pure C#</th><th>Blazor SSG</th><th>CAX (C)</th></tr>
+<tr><td>Load</td><td class="good">50ms</td><td class="bad">2000ms WASM boot</td><td class="good">50ms</td></tr>
+<tr><td>JS Payload</td><td class="good">0KB</td><td class="bad">512KB + _framework</td><td class="good">0KB</td></tr>
+<tr><td>Build Cmd</td><td>dotnet run -- build (0.12s)</td><td>dotnet publish (8s)</td><td>make + gcc (1.2s)</td></tr>
+<tr><td>Windows CMD</td><td class="good">Works</td><td>Heavy SDK</td><td class="bad">Need MinGW</td></tr>
+<tr><td>Vercel Deploy</td><td class="good">dotnet preinstalled ✓</td><td>WASM host needed</td><td class="bad">No GCC = fail</td></tr>
+<tr><td>Nested YAML</td><td class="good">Unlimited depth</td><td>JSON only</td><td>Depth 2 + segfault</td></tr>
+</table>
+</div>
+</section>

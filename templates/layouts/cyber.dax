@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="google-site-verification" content="fJTzwsNcz2AtRxQpJZzU7db7TLPdR_lKSAXfyWDtHB4">
+<meta name="google-site-verification" content="Xi3WpckDbMBvm1pdlc5XukNoA9uWDmnExIiOeaTOxq0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% include seo.dax %}
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axcora-css@1.0.1/axcora.min.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Space+Grotesk:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+<div class="bg-grid"></div><div class="bg-radial"></div>
+{% include home/nav.dax %}
+{% include home/hero.dax %}
+<main>
+{% include home/features.dax %}
+{% include home/compare.dax %}
+{% include home/get-start.dax %}
+{% include home/docs.dax %}
+{% include home/download.dax %}
+{% include home/deploy.dax %}
+</main>
+{% include home/support.dax %}
+<script src="https://cdn.jsdelivr.net/npm/axcora-js@1.0.1/axcora.min.js" defer></script>
+<script src="/js/main.js" defer></script>
+</body>
+</html>
