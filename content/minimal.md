@@ -20,7 +20,7 @@ bento1:
       - text: Without complex configuration—much like Jamstack-based SSGs such as Eleventy (11ty), Jekyll, or Astro.js—Dax precisely meets your needs in the modern SSG era.
   button: 
     text: Get Starter DAX Minimal 
-    url: https://gumorad.com
+    url: https://creativitaz.gumroad.com/l/dax
 
 bento2: 
   item: 
