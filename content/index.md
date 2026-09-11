@@ -88,7 +88,7 @@ download:
     text: "Build your project with custom DAX architecture. From bespoke UI and advanced features to full AI and API integration — we handle it all. Our expert team is ready to turn your vision into reality. Let's solve your project challenges and build for a better future."
     button: 
       text: Consult Now
-      url: mailto:hi@axcora.com
+      url: "mailto:hi@axcora.com"
     button2: 
       text: Hire Now
       url: https://www.fiverr.com/creativitas/create-your-custom-website-and-app
