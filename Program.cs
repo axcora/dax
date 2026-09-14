@@ -1,4 +1,5 @@
 using System.Text;
+using System.Linq;
 using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Net;
@@ -304,10 +305,17 @@ class DaxBuilder
             }
             else
 {
+    // FIX MINIMAL: tags = per post (dari frontmatter), all_tags = global
+    var perPostTags = new List<object>();
+    if (page.Frontmatter.TryGetValue("tags", out var _pt)) perPostTags = ParseTags(_pt).Cast<object>().ToList();
+    var allTagsList = TagsMap.Select(kv => (object)new Dictionary<string, object> { ["name"]=kv.Key, ["slug"]=Slug(kv.Key), ["count"]=kv.Value.Count, ["url"]=$"/tags/{Slug(kv.Key)}/" }).ToList();
+    
     var ctx = BuildContext(page, extra: new Dictionary<string, object> {
         ["collections"] = CollectionsToTemplate(),
-        ["tags"] = TagsMap.Keys.ToList(),
+        ["tags"] = perPostTags,
+        ["post_tags"] = perPostTags,
         ["all_tags"] = TagsMap.Keys.ToList(),
+        ["all_tags_list"] = allTagsList,
         ["prev_post"] = page.PrevPost?.ToTemplateDict(),
         ["next_post"] = page.NextPost?.ToTemplateDict(),
         ["has_prev"] = page.PrevPost!= null,
@@ -465,6 +473,12 @@ class DaxPage
     public Dictionary<string, object> ToTemplateDict()
     {
         var d = new Dictionary<string, object>(Frontmatter, StringComparer.OrdinalIgnoreCase);
+        // biar {{ post.tags }} di loop collections jalan
+        if (d.TryGetValue("tags", out var _t))
+        {
+            // keep as List<object> untuk engine
+            if (_t is List<string> lss) d["tags"] = lss.Cast<object>().ToList();
+        }
         d["url"] = Url;
         d["content"] = HtmlBody;
         return d;
@@ -473,7 +487,6 @@ class DaxPage
 
 class DaxEngine
 {
-    // FIX: PISAHKAN LOAD LAYOUT VS PARTIAL BIAR GAK TABRAKAN
     string LoadLayout(string name)
     {
         var clean = name.Replace(".dax","").Trim('/','\\');
@@ -575,7 +588,9 @@ class DaxEngine
             var rawCol = Resolve(colExpr, ctx);
             List<object> list = new();
             if (rawCol is List<object> lo) list = lo;
+            else if (rawCol is List<string> ls) list = ls.Cast<object>().ToList();
             else if (rawCol is IEnumerable<object> en) list = en.ToList();
+            else if (rawCol is IEnumerable<string> ens) list = ens.Cast<object>().ToList();
             if (!string.IsNullOrEmpty(limitStr) && int.TryParse(limitStr, out var lim)) list = list.Take(lim).ToList();
             var sb = new StringBuilder();
             foreach (var item in list)

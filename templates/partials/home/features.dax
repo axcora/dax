@@ -1,17 +1,12 @@
 <div class="neon-line mb-5"></div>
 <section class="container" id="features">
 <div class="mono info">{{features.info}}</div>
-<h2 class="title"><a href="{{metadata.url}}" class="text-white">
-  {{features.title}}</a></h2>
+<h2 class="title">{{features.title}}</h2>
 <div class="grid">
 {% for c in features.card %}
 <div class="glass card-hov p-20">
-  <h3 class="mono neons"><a href="{{metadata.url}}" class="inhe">
-  {{c.title}}
-  </a></h3>
-  <p class="text-terminal">
-    {{c.text}}
-    </p>
+  <h3 class="mono neons">{{c.title}}</h3>
+  <p class="text-terminal">{{c.text}}</p>
   </div>
   {% endfor %}
   </div>

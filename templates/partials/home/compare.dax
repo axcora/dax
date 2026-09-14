@@ -1,8 +1,6 @@
 <section class="container mt-5 mb-5" id="compare">
   <div class="mono info">{{compare.info}}</div>
-<h2 class="title"><a href="{{metadata.url}}" class="text-white">
-  {{compare.title}}
-</a></h2>
+<h2 class="title">{{compare.title}}</h2>
 <div class="compare glass">
 <table>
 <tr><th></th><th>DAX Pure C#</th><th>Blazor SSG</th><th>CAX (C)</th></tr>

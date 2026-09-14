@@ -13,7 +13,7 @@ src="{{i.image}}"/></a>
 <h3>{{i.title}}</h3>
 {% endfor %}
 <h3 class="mt-5">Tags</h3>
-{% for tag in tags %}
+{% for tag in all_tags %}
 <a href="/tags/{{ tag }}/" class="btn btn-secondary text-white btn-sm mt-1 mb-1 me-2">
 {{tag}}
 </a>{% endfor %}

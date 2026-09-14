@@ -1,13 +1,11 @@
 <section class="container mb-5" id="get-start"">
 <div class="mono info">
   {{get_start.info}}</div>
-<h2 class="title"><a href="{{metadata.url}}" class="text-white">
-  {{get_start.title}}
-</a></h2>
+<h2 class="title">{{get_start.title}}</h2>
 <div class="grid">
 {% for v in get_start.card %}
 <div class="glass card-hov p-20">
-  <h3 class="mono neons2"><a href="{{metadata.url}}" class="inhe">{{v.title}}</a></h3>
+  <h3 class="mono neons2">{{v.title}}</h3>
   <p class="text-terminal">
   {{v.text}}
   </p></div>

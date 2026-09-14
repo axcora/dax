@@ -1,5 +1,5 @@
 <footer class="container supports">
-<h2 class="title"><a href="{{metadata.url}}" class="text-white">{{support.title1}}<br/>{{support.title2}}.</h2>
+<h2 class="title">{{support.title1}}<br/>{{support.title2}}.</h2>
 <p class="text-download">{{support.text}}, <span class="mono neons">{{support.run}}</span>, {{support.text1}}</p>
 <h3>{{support.info}}</h3>
 <div class="row mt-5">
