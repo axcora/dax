@@ -9,7 +9,6 @@
 <link rel="preconnect" href="https://cdn.jsdelivr.net">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/axcora-css@1.0.1/axcora.min.css">
 <link rel="stylesheet" href="/css/style.css">
-<script async="" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6422989243541464" crossorigin="anonymous"></script>
 </head>
 <body>
 {% include minimal/nav.dax %}
