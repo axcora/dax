@@ -1,4 +1,4 @@
-<section class="container mb-5" id="get-start"">
+<section class="container mb-5" id="get-started"">
 <div class="mono info">
   {{get_start.info}}</div>
 <h2 class="title">{{get_start.title}}</h2>

@@ -18,6 +18,8 @@ navbar:
       url: "https://creativitaz.gumroad.com/l/dax"
     - title: "Github"
       url: "https://github.com/mesinkasir/dax/"
+    - title: "Dax PRO"
+      url: "https://daxpro.axcora.com/"
 about: 
   title: "DAX .NET Static Site Generator"
   description: "DAX is a slim .NET SSG. Build static sites 50x faster than Blazor SSG. No WASM bloat, just pure static HTML. For .NET devs who hate Blazor slow."
